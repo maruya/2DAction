@@ -3,13 +3,18 @@ using System.Collections;
 
 public class PlayerCamera : MonoBehaviour {
 
-	// Use this for initialization
+	private const float CameraPosZ = -10f;		// カメラのZ座標の固定値
+
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-	
+
+		// カメラをキャプチャ
+		GameObject main_camera = GameObject.Find ("Main Camera");
+
+		// プレイヤーを追従
+		main_camera.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, CameraPosZ);
 	}
 }
