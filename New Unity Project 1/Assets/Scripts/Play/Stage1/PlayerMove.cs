@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour {
 	private float speed = 0f ;				// 実際に代入する速度
 	private const float Speed = 2.0f ;		// プレイヤーは固定の速度で移動する
 	private bool IsRight = true ;			// キャラクターの向きを判断するフラグ
-	private const float JumpPower = 200f;	// ジャンプ力
+	private const float JumpPower = 250f;	// ジャンプ力
 	private int Ground ;					// 接地判定に使用するレイヤー
 	private Transform playerLeg ;			// 接地判定に使用するプレイヤーの脚
 	private Vector3 prevPos ;				// フレーム前の座標

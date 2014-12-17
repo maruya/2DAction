@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Play\Stage1\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Play\Stage1\PlayerCamera.cs" />
      <Compile Include="Assets\Scripts\Play\Stage1\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\StageSelect\IconMove.cs" />
