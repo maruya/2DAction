@@ -9,15 +9,25 @@ public class PlayerMove : MonoBehaviour {
 	private const float JumpPower = 200f;	// ジャンプ力
 	private int Ground ;					// 接地判定に使用するレイヤー
 	private Transform playerLeg ;			// 接地判定に使用するプレイヤーの脚
+	private Vector3 prevPos ;				// フレーム前の座標
 
 
 	void Start () {
 
-		// Groundレイヤーに接地判定を絞る
 		Ground = 1 << LayerMask.NameToLayer ("Ground");
-
-		// 子ノードにあるLegをキャプチャ
 		playerLeg = transform.Find ("playerLeg");
+		prevPos = this.transform.position;
+	}
+
+	void WalkorStayAnimation()
+	{
+		if (prevPos != this.transform.position && Input.anyKey)
+			GetComponent <Animator> ().SetTrigger ("Walk");
+		else
+			GetComponent <Animator> ().SetTrigger ("Stay");
+
+		// prevPosの更新
+		prevPos = this.transform.position;
 	}
 
 	void Update () {
@@ -48,5 +58,7 @@ public class PlayerMove : MonoBehaviour {
 			this.transform.localScale = new Vector3(( this.IsRight ? -scale : scale ), this.transform.localScale.y, this.transform.localScale.z) ;
 		}
 
+		// アニメーションの選択
+		WalkorStayAnimation ();
 	}
 }
