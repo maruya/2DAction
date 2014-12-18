@@ -37,6 +37,9 @@ public class PlayerMove : MonoBehaviour {
 		//animation.DirectionChange (IsRightDirection, this.transform.localScale);
 		// ジャンプ処理
 		animation.Jump (this.transform.position, this.playerLeg.position, this.Ground);
+		// 通常攻撃1
+		animation.NormalAttack1 ();
+
 	}
 
 	void FixedUpdate()

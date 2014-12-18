@@ -16,6 +16,7 @@ public class PlayerAnimation : MonoBehaviour {
 		prevPos = currentPos;
 	}
 
+
 	public void Jump(Vector3 playerPos, Vector3 playerLegPos, int layer)
 	{
 		// 接地していないときジャンプ
@@ -24,6 +25,7 @@ public class PlayerAnimation : MonoBehaviour {
 		else
 			GetComponent <Animator> ().SetBool ("IsJump", false);
 	}
+
 
 	public void DirectionChange(bool isDirection, Vector3 playerScale)
 	{
@@ -40,4 +42,20 @@ public class PlayerAnimation : MonoBehaviour {
 
 	}
 
+
+	public void NormalAttack1()
+	{
+		// Zが押されたら攻撃する
+		if (Input.GetKeyDown (KeyCode.Z)) 
+			GetComponent <Animator> ().SetTrigger ("NormalAttack1");
+			
+	}
+
 }
+
+
+
+
+
+
+
