@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Play\Stage1\PlayerAnimation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Play\Stage1\enemy\BardMove.cs">
     <Files>
-      <File FileName="Assets\Scripts\Play\Stage1\PlayerAnimation.cs" Line="9" Column="63" />
-      <File FileName="Assets\Scripts\Play\Stage1\PlayerMove.cs" Line="56" Column="42" />
+      <File FileName="Assets\Scripts\Play\Stage1\player\PlayerAnimation.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\Play\Stage1\enemy\BardMove.cs" Line="13" Column="42" />
+      <File FileName="Assets\Scripts\Play\Stage1\player\PlayerMove.cs" Line="75" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

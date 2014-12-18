@@ -46,10 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Play\Stage1\PlayerAnimation.cs" />
-     <Compile Include="Assets\Scripts\Play\Stage1\PlayerAttack.cs" />
-     <Compile Include="Assets\Scripts\Play\Stage1\PlayerCamera.cs" />
-     <Compile Include="Assets\Scripts\Play\Stage1\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Play\Stage1\enemy\BardMove.cs" />
+     <Compile Include="Assets\Scripts\Play\Stage1\player\PlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\Play\Stage1\player\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\Play\Stage1\player\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\StageSelect\IconMove.cs" />
      <Compile Include="Assets\Scripts\StageSelect\SelectMove.cs" />
      <Compile Include="Assets\Scripts\Title\SelectMenu.cs" />
