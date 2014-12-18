@@ -10,24 +10,14 @@ public class PlayerMove : MonoBehaviour {
 	private int Ground ;					// 接地判定に使用するレイヤー
 	private Transform playerLeg ;			// 接地判定に使用するプレイヤーの脚
 	private Vector3 prevPos ;				// フレーム前の座標
-
+	private PlayerAnimation animation ;		// プレイヤのアニメーション
 
 	void Start () {
 
 		Ground = 1 << LayerMask.NameToLayer ("Ground");
 		playerLeg = transform.Find ("playerLeg");
 		prevPos = this.transform.position;
-	}
-
-	void WalkorStayAnimation()
-	{
-		if (prevPos != this.transform.position && Input.anyKey)
-			GetComponent <Animator> ().SetTrigger ("Walk");
-		else
-			GetComponent <Animator> ().SetTrigger ("Stay");
-
-		// prevPosの更新
-		prevPos = this.transform.position;
+		animation = gameObject.GetComponent<PlayerAnimation> ();		// アニメーションScriptを取得
 	}
 
 	void Update () {
@@ -50,6 +40,7 @@ public class PlayerMove : MonoBehaviour {
 		float h = Input.GetAxis ("Horizontal");
 		rigidbody2D.velocity = new Vector2 (speed, this.rigidbody2D.velocity.y);
 
+
 		// キャラクターの向きを制御
 		if (h > 0 && ! this.IsRight || h < 0 && this.IsRight) 
 		{
@@ -58,7 +49,9 @@ public class PlayerMove : MonoBehaviour {
 			this.transform.localScale = new Vector3(( this.IsRight ? -scale : scale ), this.transform.localScale.y, this.transform.localScale.z) ;
 		}
 
-		// アニメーションの選択
-		WalkorStayAnimation ();
+		// スクリプトを参照してのメソッドテスト
+		//animation.DirectionChange (IsRight, this.transform.localScale);
+		animation.WalkOrStayAnimation (this.transform.position, this.prevPos);
+
 	}
 }
