@@ -3,6 +3,7 @@ using System.Collections;
 
 
 public class PlayerAnimation : MonoBehaviour {
+	
 
 	public void WalkOrStayAnimation(Vector3 currentPos,Vector3 prevPos)
 	{
@@ -13,6 +14,15 @@ public class PlayerAnimation : MonoBehaviour {
 
 		// prevPosの更新
 		prevPos = currentPos;
+	}
+
+	public void Jump(Vector3 playerPos, Vector3 playerLegPos, int layer)
+	{
+		// 接地していないときジャンプ
+		if (! Physics2D.Linecast (playerPos, playerLegPos, layer)) 
+			GetComponent <Animator> ().SetBool ("IsJump", true);
+		else
+			GetComponent <Animator> ().SetBool ("IsJump", false);
 	}
 
 	public void DirectionChange(bool isDirection, Vector3 playerScale)
