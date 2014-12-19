@@ -12,6 +12,9 @@ public class PlayerMove : MonoBehaviour {
 	private Vector3 prevPos ;					// フレーム前の座標
 	private PlayerAnimation Playeranimation ;	// プレイヤのアニメーション
 	private bool IsLegTouch = false ;			// 攻撃中であるかのフラグ
+	private CharacterStatus status ; 			// 自身のステータス
+
+	public CharacterStatus GetStatus(){return status;}
 
 
 	void Start () {

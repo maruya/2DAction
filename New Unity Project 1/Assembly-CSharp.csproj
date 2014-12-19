@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Play\Score.cs" />
+     <Compile Include="Assets\Scripts\Play\ScoreMove.cs" />
      <Compile Include="Assets\Scripts\Play\Stage1\Stage1Clear.cs" />
      <Compile Include="Assets\Scripts\Play\character\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Play\character\enemy\BardMove.cs" />

@@ -4,7 +4,6 @@ using System.Collections;
 public class SelectMenu : MonoBehaviour {
 	
 	void Start () {
-		Debug.Log ("test");
 	}
 
 	void Update () {
