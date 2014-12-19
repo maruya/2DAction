@@ -13,17 +13,21 @@ public class BardMove : MonoBehaviour {
 	private  int directionintetval = 0;								// 変更までの数値,乱数で決める
 	private Vector2 WAVE_POINT ;									// 波の開始地点を持つvector2
 	private Vector2 INTERVAL_TIME ;									// インターバルまでの数値
-	private float wavePoint ;
+	private float wavePoint ;										// 波の開始地点
+	private CharacterStatus status ;								// 自身のステータス
 
-	void Awake()
+	public CharacterStatus GetStatus(){return status;}
+
+	
+	void Start()
 	{
+		// ステータスを取得
+		status = gameObject.GetComponent<CharacterStatus> ();		// ステータスを取得
+		
 		// インターバルと波のポイントを決める
 		INTERVAL_TIME = new Vector2 (120, 180);
 		WAVE_POINT = new Vector2 (0f, 5f);
-	}
 
-	void Start()
-	{
 		// 向き変更までの時間を決定する
 		directionintetval = Random.Range ((int)INTERVAL_TIME.x, (int)INTERVAL_TIME.y);
 
@@ -49,9 +53,17 @@ public class BardMove : MonoBehaviour {
 		return wave;
 	}
 
-
-	void Update () 
+	void Die()
 	{
+		// HPが0ならば自身を削除する
+		if (status.HP <= 0) Destroy (gameObject);
+	}
+
+	public void Work () 
+	{
+		// 死亡チェック
+		Die ();
+
 		// 敵の挙動
 		this.transform.position += (new Vector3 (0f, Wave(), 0f)); 
 
@@ -60,6 +72,16 @@ public class BardMove : MonoBehaviour {
 		rigidbody2D.velocity = new Vector2 (speed, this.rigidbody2D.velocity.y);
 		float scale = Mathf.Abs(this.transform.localScale.x) ;
 		this.transform.localScale = new Vector3(( speed > 0f ? scale : -scale ), this.transform.localScale.y, this.transform.localScale.z) ;
+	}
+
+	public void OnCollisionEnter2D(Collision2D col)
+	{
+		// ToDO=============
+		// プレイヤーに当たった場合HPを0にする
+		if (col.transform.name == "player") 
+		{
+			status.HP = 0 ;
+		}
 	}
 }
 
