@@ -1,2 +1,2 @@
-Library/
+2DActionProject/Library/
 !.gitignore
