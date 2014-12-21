@@ -19,15 +19,15 @@ public class IconMove : MonoBehaviour {
 		}
 	}
 
-	private const float Speed = 0.1f;									// 速度は固定値
-	private const float Circle = 0.105f;								// 半径
-	private string SceneName = "";										// シーン名の入れ物
+	private const float SPEED = 0.1f;									// 速度は固定値
+	private const float CIRCLE = 0.105f;								// 半径
+	private string sceneName = "";										// シーン名の入れ物
 	private List<StageInfo> StageInfoList = new List<StageInfo>();		// ステージ情報のコンテナ
 
 	
 	void CreateStageInfo()
 	{
-		// ToDO============
+		// 各ステージ情報をセット
 		StageInfoList.Add (new StageInfo ("Stage1", new Vector3 (0f, 4.0f, 0), 0.105f));
 		StageInfoList.Add (new StageInfo ("Stage2", new Vector3 (0f, 0f, 0), 0.105f));
 		StageInfoList.Add (new StageInfo ("Stage3", new Vector3 (0f, -4.0f, 0), 0.105f));
@@ -40,13 +40,13 @@ public class IconMove : MonoBehaviour {
 		{
 			// ステージアイコンとの判定
 			if( Mathf.Sqrt(((this.transform.position.x - stage.pos.x)*(this.transform.position.x - stage.pos.x) +
-			                (this.transform.position.y - stage.pos.y)*(this.transform.position.y - stage.pos.y))) < (Circle + stage.r))
+			                (this.transform.position.y - stage.pos.y)*(this.transform.position.y - stage.pos.y))) < (CIRCLE + stage.r))
 			{
 				// スペーズを押したらシーン名をキャプチャしてシーンへ移動
 				if(Input.GetButtonDown("jump"))
 				{
-					SceneName = stage.name ;
-					Application.LoadLevel(SceneName) ;
+					sceneName = stage.name ;
+					Application.LoadLevel(sceneName) ;
 				}
 			}
 		}
@@ -61,15 +61,13 @@ public class IconMove : MonoBehaviour {
 
 	void Update () {
 
-		// Move
-		// ToDo=======
-		if (Input.GetKey ("left")) transform.Translate (Vector3.left * Speed);
-		if( Input.GetKey("right")) transform.Translate (Vector3.right * Speed);
-		if( Input.GetKey("up")) transform.Translate (Vector3.up * Speed);
-		if( Input.GetKey("down")) transform.Translate (Vector3.down * Speed);
-		// ===========
+		// 移動
+		if (Input.GetKey ("left")) transform.Translate (Vector3.left * SPEED);
+        if (Input.GetKey("right")) transform.Translate(Vector3.right * SPEED);
+        if (Input.GetKey("up")) transform.Translate(Vector3.up * SPEED);
+        if (Input.GetKey("down")) transform.Translate(Vector3.down * SPEED);
 
-		// ColliderPshere2D
+		// 選択ステージの判定
 		CollisionSphere2D ();
 	}
 	

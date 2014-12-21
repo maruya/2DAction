@@ -67,6 +67,8 @@ public class PlayerMove : MonoBehaviour {
 	{
 		// 移動or待機
 		playerAnimation.WalkOrStayAnimation (this.transform.position, this.prevPos);
+
+        //ToDO=====Animationスクリプトで実行するとScaleが反映されない未解決
 		// 向きの変更
 		//Playeranimation.DirectionChange (IsRightDirection, this.transform.localScale);
 		// ジャンプ処理

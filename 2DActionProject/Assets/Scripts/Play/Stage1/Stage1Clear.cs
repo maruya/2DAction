@@ -16,7 +16,7 @@ public class Stage1Clear : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		// リザルトへ移行
+		// 対応したオブジェクトに当たるとリザルトへ移行
 		if (col.gameObject.name == "player")
 			Application.LoadLevel ("Result");
 	}

@@ -13,8 +13,8 @@ public class SelectMenu : MonoBehaviour {
 	void OnGUI()
 	{
 		// Start	or	Exit
-		if(GUI.Button(new Rect(120,180,200,20), "Start")) Application.LoadLevel("StageSelect") ;
-		if (GUI.Button (new Rect (120, 220, 200, 20), "Exit")) Application.Quit ();
+		if(GUI.Button(new Rect(50,100,220,20), "Start")) Application.LoadLevel("StageSelect") ;
+		if (GUI.Button (new Rect (50, 140, 220, 20), "Exit")) Application.Quit ();
 	}
 
 }

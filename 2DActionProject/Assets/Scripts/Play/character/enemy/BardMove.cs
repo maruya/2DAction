@@ -8,7 +8,7 @@ public class BardMove : MonoBehaviour {
 
 
 	private  float speed = 1.0f;									// 移動力
-	private const float WaveSize = 2.0f;							// 揺れる幅
+	private const float WAVE_SIZE = 2.0f;							// 揺れる幅
 	private int directionCounter = 0;								// 方向変換までのカウンター
 	private  int directionintetval = 0;								// 変更までの数値,乱数で決める
 	private Vector2 WAVE_POINT ;									// 波の開始地点を持つvector2
@@ -56,14 +56,22 @@ public class BardMove : MonoBehaviour {
 	float Wave()
 	{
 		float point = Time.time + wavePoint;	// 開始地点
-		float wave = (Mathf.Sin (point * WaveSize) * Mathf.Deg2Rad) ;
+		float wave = (Mathf.Sin (point * WAVE_SIZE) * Mathf.Deg2Rad) ;
 		return wave;
 	}
 
 	void Die()
 	{
-		// HPが0ならば自身を削除する
-		if (status.HP <= 0) Destroy (gameObject);
+		// HPが0ならばスコアを渡して自身を削除する
+		if (status.HP <= 0)
+        {
+            // 死亡エフェクトをプレハブから生成
+            Instantiate(Resources.Load("Prefabs/Smoke"), transform.position, transform.rotation);
+
+             PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
+             player.GetStatus().Score += status.Score;
+             Destroy(gameObject);
+        }
 	}
 
 	public void Work () 

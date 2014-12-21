@@ -5,11 +5,9 @@ using System.Collections;
 public class PlayerAnimation : MonoBehaviour {
 
 
-	// 自身の攻撃名
-	private string NormalAttack1_str = "player_normal_attack1_2";
-
 	public void WalkOrStayAnimation(Vector3 currentPos,Vector3 prevPos)
 	{
+        // なにかキーが押されていれば歩く
 		if (prevPos != currentPos && Input.anyKey)
 			GetComponent <Animator> ().SetTrigger ("Walk");
 		else
@@ -35,7 +33,6 @@ public class PlayerAnimation : MonoBehaviour {
 		// 左右どちらかの判定
 		float left_or_right = Input.GetAxis ("Horizontal");
 
-		Debug.Log(left_or_right);
 		// キャラクターの向きを制御
 		if (left_or_right > 0 && ! isDirection || left_or_right < 0 && isDirection) 
 		{
