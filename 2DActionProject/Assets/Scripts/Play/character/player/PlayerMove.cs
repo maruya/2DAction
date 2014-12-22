@@ -104,4 +104,23 @@ public class PlayerMove : MonoBehaviour {
 		// アニメーションを実行
 		AnimationMove ();
 	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.transform.tag == "Enemy") 
+		{
+			// 敵のステータスからスコアの減少値を取得し,プレイヤーに減算
+			CharacterStatus enemyStatus = collision.gameObject.GetComponent<CharacterStatus>();
+			status.Score -= enemyStatus.DamageScore ;
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
