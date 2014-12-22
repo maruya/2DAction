@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: affd7a361a4407e4b9e27b8731196d6b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: player_damage1
+    21300002: player_damage2
+    21300004: player_damage3
+    21300006: player_damage4
+    21300008: player_damage_die_4
+    21300010: player_damage_die_5
+    21300012: player_damage_die_6
+    21300014: player_damage_die_7
+    21300016: player_die1
+    21300018: player_die2
+    21300020: player_die3
+    21300022: player_die4
+    21300024: player_damage_die_12
+    21300026: player_damage_die_13
+    21300028: player_damage_die_14
+    21300030: player_damage_die_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: player_damage1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 288
+        width: 33
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 288
+        width: 41
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 288
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage4
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 288
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 192
+        width: 33
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_5
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 194
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_6
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 198
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_7
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 197
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_die1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 96
+        width: 40
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_die2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 97
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_die3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 97
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_die4
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 96
+        width: 67
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_13
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 40
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_14
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 13
+        width: 62
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_damage_die_15
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 69
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -66,7 +66,7 @@ public class PlayerMove : MonoBehaviour {
 	}
 
 
-	void AnimationMove()
+	void GeneralAnimationMove()
 	{
 		// 移動or待機
 		playerAnimation.WalkOrStayAnimation (this.transform.position, this.prevPos);
@@ -102,7 +102,7 @@ public class PlayerMove : MonoBehaviour {
 		}
 
 		// アニメーションを実行
-		AnimationMove ();
+		GeneralAnimationMove ();
 	}
 
 	void OnCollisionEnter2D(Collision2D collision)
@@ -112,6 +112,9 @@ public class PlayerMove : MonoBehaviour {
 			// 敵のステータスからスコアの減少値を取得し,プレイヤーに減算
 			CharacterStatus enemyStatus = collision.gameObject.GetComponent<CharacterStatus>();
 			status.Score -= enemyStatus.DamageScore ;
+
+			// ダメージモーションの実行
+			playerAnimation.Damage();
 		}
 	}
 }

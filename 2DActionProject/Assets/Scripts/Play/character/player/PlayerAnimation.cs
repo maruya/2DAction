@@ -4,11 +4,12 @@ using System.Collections;
 
 public class PlayerAnimation : MonoBehaviour {
 
+	private const float KNOCK_BACK = 2000f ;		// ノックバック値
 
 	public void WalkOrStayAnimation(Vector3 currentPos,Vector3 prevPos)
 	{
-        // なにかキーが押されていれば歩く
-		if (prevPos != currentPos && Input.anyKey)
+		// 左右どちらかが押されていれば移動
+		if (prevPos != currentPos && (Input.GetKey("left") || Input.GetKey("right") ))
 			GetComponent <Animator> ().SetTrigger ("Walk");
 		else
 			GetComponent <Animator> ().SetTrigger ("Stay");
@@ -40,6 +41,16 @@ public class PlayerAnimation : MonoBehaviour {
 			float scaleX = Mathf.Abs(playerScale.x) ;
 			playerScale = new Vector3(( isDirection ? -scaleX : scaleX ), playerScale.y, playerScale.z) ;
 		}
+	}
+
+
+	public void Damage()
+	{
+		// TODO ノックバックの調整がよくない
+		// ノックバックとダメージモーション
+		Vector2 vec2 = new Vector2( (this.transform.localScale.x > 0 ? KNOCK_BACK : -KNOCK_BACK), 0f );
+		rigidbody2D.AddForce(vec2);
+		GetComponent<Animator> ().SetTrigger ("Damage");
 	}
 
 
