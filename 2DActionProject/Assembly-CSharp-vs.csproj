@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Play\GuiScore.cs" />
      <Compile Include="Assets\Scripts\Play\ScoreMove.cs" />
      <Compile Include="Assets\Scripts\Play\Stage1\Stage1Clear.cs" />
+     <Compile Include="Assets\Scripts\Play\Stage1\Stage1Manager.cs" />
      <Compile Include="Assets\Scripts\Play\StageCrear.cs" />
      <Compile Include="Assets\Scripts\Play\character\CharacterStatus.cs" />
      <Compile Include="Assets\Scripts\Play\character\enemy\BardMove.cs" />
@@ -60,6 +61,7 @@
      <Compile Include="Assets\Scripts\StageSelect\IconMove.cs" />
      <Compile Include="Assets\Scripts\StageSelect\SelectMove.cs" />
      <Compile Include="Assets\Scripts\Title\SelectMenu.cs" />
+     <Compile Include="Assets\Scripts\Title\xFoxFade.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -15,7 +15,17 @@ public class PlayerMove : MonoBehaviour {
 	private bool isLegTouch = false ;			// 攻撃中であるかのフラグ
 	private CharacterStatus status ; 			// 自身のステータス
 
+	private bool isActive = false ;				// 動けるかどうか判定
+	private const float STAY_TIME = 2.0f ;		// 待機時間
+
 	public CharacterStatus GetStatus(){return status;}
+
+
+	IEnumerator StandBy()
+	{
+		yield return new WaitForSeconds (STAY_TIME);
+		isActive = true;
+	}
 
 
 	void Start () {
@@ -39,18 +49,24 @@ public class PlayerMove : MonoBehaviour {
 
 	void Update () {
 
-		// 現在のロコモーターのタグを調べ、移動できるか判断
-		Animator anim = GetComponent<Animator> ();
-		AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo (0);
-		if (state.IsTag ("BaseMotion")) 
+		// アクティブになるまでの待機時間
+		StartCoroutine (StandBy ());
+
+		if (isActive)
 		{
-			// 移動の方向に速度を代入
-			if (Input.GetKey ("left"))
-				speed = -SPEED;
-			else if (Input.GetKey ("right"))
-				speed = SPEED;
-			else
-				speed = 0f;
+
+			// 現在のロコモーターのタグを調べ、移動できるか判断
+			Animator anim = GetComponent<Animator> ();
+			AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo (0);
+			if (state.IsTag ("BaseMotion")) {
+					// 移動の方向に速度を代入
+					if (Input.GetKey ("left"))
+							speed = -SPEED;
+					else if (Input.GetKey ("right"))
+							speed = SPEED;
+					else
+							speed = 0f;
+			}
 		}
 
 		// 接地判定の更新
@@ -84,21 +100,24 @@ public class PlayerMove : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if (isLegTouch) 
+		if (isActive)
 		{
-            if (Input.GetButtonDown("jump")) rigidbody2D.AddForce(new Vector2(0f, JUMP_POWER));
-		}
+			if (isLegTouch) 
+			{
+				if (Input.GetButtonDown ("jump"))
+				rigidbody2D.AddForce (new Vector2 (0f, JUMP_POWER));
+			}
 
-		// 速度を制限
-		float h = Input.GetAxis ("Horizontal");
-		rigidbody2D.velocity = new Vector2 (speed, this.rigidbody2D.velocity.y);
+			// 速度を制限
+			float h = Input.GetAxis ("Horizontal");
+			rigidbody2D.velocity = new Vector2 (speed, this.rigidbody2D.velocity.y);
 
-		// キャラクターの向きを制御
-		if (h > 0f && ! this.isRightDirection || h < 0f && this.isRightDirection) 
-		{
-			this.isRightDirection = (h > 0f) ;
-			float scale = Mathf.Abs(this.transform.localScale.x) ;
-			this.transform.localScale = new Vector3(( this.isRightDirection ? -scale : scale ), this.transform.localScale.y, this.transform.localScale.z) ;
+			// キャラクターの向きを制御
+			if (h > 0f && ! this.isRightDirection || h < 0f && this.isRightDirection) {
+					this.isRightDirection = (h > 0f);
+					float scale = Mathf.Abs (this.transform.localScale.x);
+					this.transform.localScale = new Vector3 ((this.isRightDirection ? -scale : scale), this.transform.localScale.y, this.transform.localScale.z);
+			}
 		}
 
 		// アニメーションを実行
