@@ -11,7 +11,15 @@ public class Stage1Manager : MonoBehaviour {
 		// TODO 一時停止の処理をどうするか考えておく
 	}
 
+	IEnumerator Setup()
+	{
+		yield return new WaitForSeconds(1.0f) ;
+		Time.timeScale = 0;
+	}
+
 	void Update () {
-	
+
+		//StartCoroutine (Setup ());
+
 	}
 }

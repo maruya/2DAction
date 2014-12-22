@@ -58,10 +58,13 @@
     <Compile Include="Assets\Scripts\Play\Stage1\Stage1Clear.cs" />
     <Compile Include="Assets\Scripts\Play\Stage1\Stage1Manager.cs" />
     <Compile Include="Assets\Scripts\Play\StageCrear.cs" />
+    <Compile Include="Assets\Scripts\Play\character\BaseCharacter.cs" />
     <Compile Include="Assets\Scripts\Play\character\CharacterStatus.cs" />
     <Compile Include="Assets\Scripts\Play\character\enemy\BardMove.cs" />
     <Compile Include="Assets\Scripts\Play\character\player\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\Play\character\player\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\Play\character\player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Play\character\player\PlayerMain.cs" />
     <Compile Include="Assets\Scripts\Play\character\player\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\StageSelect\IconMove.cs" />
     <Compile Include="Assets\Scripts\StageSelect\SelectMove.cs" />
