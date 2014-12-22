@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Play\Effects\HitEffectMove.cs" />
     <Compile Include="Assets\Scripts\Play\Effects\SmokeMove.cs" />
     <Compile Include="Assets\Scripts\Play\GuiScore.cs" />
     <Compile Include="Assets\Scripts\Play\ScoreMove.cs" />

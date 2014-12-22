@@ -114,7 +114,8 @@ public class BardMove : MonoBehaviour {
 		// プレイヤーに当たった場合HPを0にする
 		if ( collider.tag== "PlayerAttack") 
 		{
-			status.HP = 0 ;
+			Instantiate(Resources.Load("Prefabs/HitEffect"), this.transform.position, this.transform.rotation);
+			status.HP -= 1 ;
 		}
 	}
 }
