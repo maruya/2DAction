@@ -60,17 +60,36 @@ public class BardMove : MonoBehaviour {
 		return wave;
 	}
 
+	void CreateDrawScore()
+	{
+		string drawScore = status.Score.ToString();
+		float addX = 0;								// スコアの重なりを防止
+
+		// スコアをプレハブから生成
+		foreach (var score in drawScore) 
+		{
+			string serif = "Prefabs/ScoreNumbers/" + score ;
+			Vector3 pos = new Vector3(transform.position.x + addX, transform.position.y, transform.position.z);
+			Instantiate(Resources.Load(serif), pos, this.transform.rotation);
+			addX += 0.5f ;
+		}
+
+	}
+
 	void Die()
 	{
-		// HPが0ならばスコアを渡して自身を削除する
 		if (status.HP <= 0)
         {
             // 死亡エフェクトをプレハブから生成
             Instantiate(Resources.Load("Prefabs/Smoke"), transform.position, transform.rotation);
 
-             PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
-             player.GetStatus().Score += status.Score;
-             Destroy(gameObject);
+			// 自身の持つスコアを生成
+			CreateDrawScore();
+
+			// プレイヤーにスコアを渡す
+            PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
+            player.GetStatus().Score += status.Score;
+            Destroy(gameObject);
         }
 	}
 

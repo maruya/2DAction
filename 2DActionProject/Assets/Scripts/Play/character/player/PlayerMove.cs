@@ -29,6 +29,9 @@ public class PlayerMove : MonoBehaviour {
         // アニメーションScriptを取得
 		playerAnimation = gameObject.GetComponent<PlayerAnimation> ();
 
+		// ステータスを取得
+		status = gameObject.GetComponent<CharacterStatus> ();
+
         // 両足の座標を取得
         playerLeftLeg = transform.Find("playerLeftLeg");
         playerRightLeg = transform.Find("playerRightLeg");
