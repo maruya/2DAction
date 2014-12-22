@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 03b74287f173641448519e0e4112b036
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: player_air_attack_0
+    21300002: player_air_attack_1
+    21300004: player_air_attack_2
+    21300006: player_air_attack_3
+    21300008: player_air_attack_4
+    21300010: player_air_attack_5
+    21300012: player_air_attack_6
+    21300014: player_air_attack_7
+    21300016: player_air_attack_8
+    21300018: player_air_attack_9
+    21300020: player_air_attack_10
+    21300022: player_air_attack_11
+    21300024: player_air_attack1
+    21300026: player_air_attack2
+    21300028: player_air_attack3
+    21300030: player_air_attack4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: player_air_attack_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 288
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 288
+        width: 83
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 288
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_3
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 288
+        width: 81
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 192
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 192
+        width: 85
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 192
+        width: 59
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_7
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 192
+        width: 77
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 97
+        width: 67
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_9
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 103
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_10
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 103
+        width: 57
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack_11
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 100
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 23
+        width: 63
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 10
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack3
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 2
+        width: 40
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: player_air_attack4
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 2
+        width: 32
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

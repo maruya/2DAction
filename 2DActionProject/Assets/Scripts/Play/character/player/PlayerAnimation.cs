@@ -54,14 +54,26 @@ public class PlayerAnimation : MonoBehaviour {
 	}
 
 
-	public void NormalAttack1(bool isLegTouch, string currentRenderer)
+	public void NormalAttack1(bool isLegTouch)
 	{
-        // 足が設置している状態
+        // 足が接地している状態
 		if (isLegTouch) 
 		{
 			// Zが押されたら攻撃する
 			if (Input.GetKeyDown (KeyCode.Z)) 
 			GetComponent <Animator> ().SetTrigger ("NormalAttack1");
+		}
+	}
+
+
+	public void AirAttack1(bool isLegTouch)
+	{
+		// 足が接地していない状態
+		if (! isLegTouch) 
+		{
+			// Zが押されたら攻撃する
+			if (Input.GetKeyDown (KeyCode.Z)) 
+			GetComponent <Animator> ().SetTrigger ("AirAttack1");
 		}
 	}
 

@@ -112,7 +112,7 @@ public class BardMove : MonoBehaviour {
 	{
 		// ToDO=============
 		// プレイヤーに当たった場合HPを0にする
-		if ( collider.tag== "NormalAttack") 
+		if ( collider.tag== "PlayerAttack") 
 		{
 			status.HP = 0 ;
 		}

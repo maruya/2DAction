@@ -76,10 +76,10 @@ public class PlayerMove : MonoBehaviour {
 		//Playeranimation.DirectionChange (IsRightDirection, this.transform.localScale);
 		// ジャンプ処理
 		playerAnimation.Jump (this.isLegTouch);
-		// 現在のsprite画像のnameを受け取る
-		SpriteRenderer sp = GetComponent<SpriteRenderer> ();
 		// 通常攻撃1
-		playerAnimation.NormalAttack1 (this.isLegTouch, sp.sprite.name);
+		playerAnimation.NormalAttack1 (this.isLegTouch);
+		// 空中攻撃1
+		playerAnimation.AirAttack1 (this.isLegTouch);
 	}
 
 	void FixedUpdate()
