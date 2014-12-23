@@ -1,3 +1,0 @@
-2DActionProject/Library/
-2DActionProject/Temp/
-!.gitignore
