@@ -1,0 +1,7 @@
+2DActionProject/Library/
+2DActionProject/Temp/
+*.sln
+
+*.pidb
+*.unityproj
+*.userprefs
