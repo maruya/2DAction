@@ -11,7 +11,7 @@ public class BaseCharacter : MonoBehaviour {
 	public bool isGroundTouch;	// 接地判定
 
 
-	protected virtual void AWwake()
+	protected virtual void Awake()
 	{
 		hp = 0;
 		speed = 0;
@@ -31,4 +31,8 @@ public class BaseCharacter : MonoBehaviour {
 	protected virtual void FixedUpdate()
 	{
 	}
+
+    protected virtual void OnCollisionEnter2D(Collision2D collision2d)
+    {
+    }
 }

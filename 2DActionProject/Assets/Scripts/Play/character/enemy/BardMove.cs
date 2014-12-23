@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class BardMove : MonoBehaviour {
 	
 
-
 	private  float speed = 1.0f;									// 移動力
 	private const float WAVE_SIZE = 2.0f;							// 揺れる幅
 	private int directionCounter = 0;								// 方向変換までのカウンター
@@ -87,8 +86,8 @@ public class BardMove : MonoBehaviour {
 			CreateDrawScore();
 
 			// プレイヤーにスコアを渡す
-            PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
-            player.GetStatus().Score += status.Score;
+            //PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
+            //player.GetStatus().Score += status.Score;
             Destroy(gameObject);
         }
 	}
