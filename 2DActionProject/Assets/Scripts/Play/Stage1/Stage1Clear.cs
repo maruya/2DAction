@@ -14,10 +14,10 @@ public class Stage1Clear : MonoBehaviour {
 	{
 	}
 
-	void OnCollisionEnter2D(Collision2D col)
+	void OnTriggerEnter2D(Collider2D collider2d)
 	{
 		// 対応したオブジェクトに当たるとリザルトへ移行
-		if (col.gameObject.name == "player")
+		if (collider2d.name == "player")
 			Application.LoadLevel ("Result");
 	}
 }
