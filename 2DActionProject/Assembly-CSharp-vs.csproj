@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Play\Item\ItemMain.cs" />
      <Compile Include="Assets\Scripts\Play\ScoreMove.cs" />
      <Compile Include="Assets\Scripts\Play\Stage1\Stage1Clear.cs" />
+     <Compile Include="Assets\Scripts\Play\Stage2\AntsNestMove.cs" />
      <Compile Include="Assets\Scripts\Play\character\BaseCharacterController.cs" />
      <Compile Include="Assets\Scripts\Play\character\enemy\AntController.cs" />
      <Compile Include="Assets\Scripts\Play\character\enemy\AntMain.cs" />
