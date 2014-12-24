@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Play\character\player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Play\character\player\PlayerMain.cs" />
     <Compile Include="Assets\Scripts\StageSelect\IconMove.cs" />
+    <Compile Include="Assets\Scripts\StageSelect\SelectIcon\SelectIconMain.cs" />
     <Compile Include="Assets\Scripts\StageSelect\SelectMove.cs" />
     <Compile Include="Assets\Scripts\Title\SelectMenu.cs" />
     <Compile Include="Assets\Scripts\Title\xFoxFade.cs" />
