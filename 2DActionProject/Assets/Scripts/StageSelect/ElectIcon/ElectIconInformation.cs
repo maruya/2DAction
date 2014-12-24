@@ -11,6 +11,12 @@ public class ElectIconInformation : MonoBehaviour {
 
 	void Update () {
 	
+	}
+
+	public void DrawInfo()
+	{
+		Debug.Log ("Hit");
 		this.guiText.text = "" + information;
 	}
+	
 }
