@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\Play\ScoreMove.cs" />
      <Compile Include="Assets\Scripts\Play\Stage1\Stage1Clear.cs" />
      <Compile Include="Assets\Scripts\Play\character\BaseCharacterController.cs" />
+     <Compile Include="Assets\Scripts\Play\character\enemy\AntController.cs" />
+     <Compile Include="Assets\Scripts\Play\character\enemy\AntMain.cs" />
      <Compile Include="Assets\Scripts\Play\character\enemy\BardController.cs" />
      <Compile Include="Assets\Scripts\Play\character\enemy\BardMain.cs" />
      <Compile Include="Assets\Scripts\Play\character\player\PlayerCamera.cs" />
