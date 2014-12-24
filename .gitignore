@@ -1,7 +1,8 @@
 2DActionProject/Library/
 2DActionProject/Temp/
 *.sln
-
+*.csproj
 *.pidb
 *.unityproj
 *.userprefs
+*.suo
