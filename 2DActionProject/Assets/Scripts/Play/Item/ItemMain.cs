@@ -33,7 +33,7 @@ public class ItemMain : MonoBehaviour {
         // プレイヤーにスコアを渡し消滅する
         if (collider2d.name == "player")
         {
-            GameObject.Find("player").GetComponent<BaseCharacter>().score += point;
+            GameObject.Find("player").GetComponent<BaseCharacterController>().score += point;
             CreateDrawScore();
             Destroy(gameObject);
         }

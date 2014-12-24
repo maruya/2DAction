@@ -6,7 +6,7 @@ public class GuiScore : MonoBehaviour {
     // GUIの表示
     [ExecuteInEditMode()]
 
-    private int score = 0;
+    private int drawScore = 0;
 
 	void Start () {
 	
@@ -17,7 +17,7 @@ public class GuiScore : MonoBehaviour {
         // スコアの更新
         //PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
         //score = player.GetStatus().Score;
-        int drawScore = GameObject.Find("player").GetComponent<BaseCharacter>().score;
+        drawScore = GameObject.Find("player").GetComponent<BaseCharacterController>().score;
 
         // 描画する
         this.guiText.text = "Score_" + drawScore;

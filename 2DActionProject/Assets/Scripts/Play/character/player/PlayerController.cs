@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : BaseCharacter
+public class PlayerController : BaseCharacterController
 {
 
     private bool isDirection;				// キャラクターの向き
@@ -154,8 +154,7 @@ public class PlayerController : BaseCharacter
                 rigidbody2D.AddForce(new Vector2(0f, jumpPower));
         }
 
-        // 速度を制限
-        float h = Input.GetAxis("Horizontal");
+        // 速度を加算
         rigidbody2D.velocity = new Vector2(speed, this.rigidbody2D.velocity.y);
 
         // 向きを設定
@@ -163,16 +162,16 @@ public class PlayerController : BaseCharacter
     }
 
 
-    protected override void OnCollisionEnter2D(Collision2D collision2d)
+    void OnCollisionEnter2D(Collision2D collision2d)
     {
         if (collision2d.transform.tag == "Enemy")
         {
             //TODO 現在は敵の基底クラスがないのでBaseCharacterから呼び出せない
 
             // 敵のステータスからスコアの減少値を取得し,プレイヤーに減算
-            //int damage = collision2d.gameObject.GetComponent<BaseCharacter>().score;
-            int damage = collision2d.gameObject.GetComponent<CharacterStatus>().Score;
+			int damage = collision2d.gameObject.GetComponent<BaseCharacterController>().power ;
             score -= damage;
+			if( score <= 0 ) score = 0 ;
 
             // ダメージモーションの実行
             AnimationDamage();
