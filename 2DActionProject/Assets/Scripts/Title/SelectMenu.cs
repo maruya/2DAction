@@ -4,6 +4,8 @@ using System.Collections;
 public class SelectMenu : MonoBehaviour {
 	
 	void Start () {
+
+		DontDestroyOnLoad (this.gameObject);
 	}
 
 	void Update () {

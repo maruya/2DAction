@@ -6,6 +6,10 @@ public class AttackEffectMove : MonoBehaviour {
 	private float direction = 0;			// 向き
 	private const float SPEED = 0.1f;		// 速度		
 
+	void Awake()
+	{
+	}
+
 	void Start () {
 	
 		// 進む方向
