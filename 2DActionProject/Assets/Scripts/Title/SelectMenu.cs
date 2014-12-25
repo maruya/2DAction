@@ -18,7 +18,7 @@ public class SelectMenu : MonoBehaviour {
 		if(GUI.Button(new Rect(150,200,220,20), "Start"))
 		{
 			SceneChanger changer = GameObject.Find("SceneChange").GetComponent<SceneChanger>();
-			changer.SetNextScene("StageSelect");
+			changer.SetNextScene("Stage1");
 		}
 
 		if (GUI.Button (new Rect (150, 240, 220, 20), "Exit")) Application.Quit ();
