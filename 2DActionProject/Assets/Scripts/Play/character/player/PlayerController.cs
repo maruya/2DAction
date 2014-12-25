@@ -123,7 +123,15 @@ public class PlayerController : BaseCharacterController
     private void AnimationNormalAttack()
     {
         if (isGroundTouch)
-        {
+		{			
+			// アニメーション名がNormalAttack1であればtrue
+			Animator animator = GetComponent<Animator> ();
+			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo (0);
+			if(! stateInfo.IsName("NormalAttack1"))
+			{
+				Instantiate(Resources.Load("Prefabs/AttackEffect1"));
+			}
+
             GetComponent<Animator>().SetTrigger("NormalAttack1");
         }
     }
@@ -157,6 +165,8 @@ public class PlayerController : BaseCharacterController
         // 速度を加算
         rigidbody2D.velocity = new Vector2(speed, this.rigidbody2D.velocity.y);
 
+
+
         // 向きを設定
         DirectionChange();
     }
@@ -166,8 +176,6 @@ public class PlayerController : BaseCharacterController
     {
         if (collision2d.transform.tag == "Enemy")
         {
-            //TODO 現在は敵の基底クラスがないのでBaseCharacterから呼び出せない
-
             // 敵のステータスからスコアの減少値を取得し,プレイヤーに減算
 			int damage = collision2d.gameObject.GetComponent<BaseCharacterController>().power ;
             score -= damage;

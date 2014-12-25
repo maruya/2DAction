@@ -100,20 +100,5 @@ public class BardController : BaseCharacterController {
 	void OnTriggerEnter2D( Collider2D collider2d )
 	{
 		if (collider2d.tag == "PlayerAttack")  hp -= 1;
-	}
-
-
-	// TODO 普段は攻撃判定を消しているだめ出るときと出ないときがある
-#if false
-	void OnCollisionEnter2D( Collision2D collision2d )
-	{
-		if (collision2d.transform.tag == "PlayerAttack") 
-		{
-			Debug.Log("Effect");
-			// 衝突位置にエフェクトを生成
-			Vector3 contactPoint = new Vector3(collision2d.contacts[0].point.x, collision2d.contacts[0].point.y, 0f ) ;
-			Instantiate(Resources.Load("Prefabs/HitEffect"), contactPoint, this.transform.rotation);
-		}
-	}
-#endif
+	}	
 }
