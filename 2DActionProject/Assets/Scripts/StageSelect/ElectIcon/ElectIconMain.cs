@@ -19,7 +19,6 @@ public class ElectIconMain : MonoBehaviour {
 			Debug.Log("Hit") ;
 			foreach( Transform info in transform )
 			{
-
 				var tmp = info.GetComponent<ElectIconInformation>();
 				tmp.DrawInfo();
 			}

@@ -158,7 +158,10 @@ public class PlayerController : BaseCharacterController
         if (isGroundTouch)
         {
             if (Input.GetButtonDown("jump"))
+			{
                 rigidbody2D.AddForce(new Vector2(0f, jumpPower));
+				rigidbody2D.velocity = new Vector2( 0f,1f );		// 接地している地面から少し離れる(大ジャンプ防止)
+			}
         }
 
         // 速度を加算

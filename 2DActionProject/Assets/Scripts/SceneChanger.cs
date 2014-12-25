@@ -13,11 +13,16 @@ public class SceneChanger : MonoBehaviour {
 	private const float CHANGE_SPEED = 1f;	// 切り替え速度
 	enum ChangeCase{ BEFORE, SCENE_CHANGE, AFTER, EMPTY }
 	private ChangeCase enumCase ;			// switchで使用するenum型の変数
-	private const float GAPPOS = 100f;		// 画像と座標の差
+	private const float GAPPOS = 25f;		// 画像と座標の差
 
 	void Start () {
 
+		// アプリケーションの終了まで使用する
+		DontDestroyOnLoad (this);
+
 		// 初期化
+		targetScene = "";
+		prevScene = "";
 		startPoint = Vector3.zero;
 		endPoint = Vector3.zero;
 		targetPoint = Vector3.zero;
@@ -31,10 +36,14 @@ public class SceneChanger : MonoBehaviour {
 		targetScene = nextScene;
 		enumCase = ChangeCase.BEFORE;
 
-		// カメラの座標をキャプチャ
+		// カメラの座標をキャプチャし設定
 		Transform cameraTransform = GameObject.Find ("Main Camera").transform;
 		startPoint = new Vector3 (cameraTransform.position.x + GAPPOS, cameraTransform.position.y, 0f);
+		targetPoint = cameraTransform.position;
 		endPoint = new Vector3 (cameraTransform.position.x - GAPPOS, cameraTransform.position.y, 0f);
+
+		// 自身の座標を設定
+		transform.position = startPoint;
 
 		// rendererをオン
 		renderer.enabled = true;
@@ -74,11 +83,8 @@ public class SceneChanger : MonoBehaviour {
 
 	private bool CheckChangeScene()
 	{
-		if (targetScene != prevScene)
-		{
-			return true;
-		}
-			else return false;
+		if (targetScene != prevScene) return true;
+		else return false;
 	}
 
 	void Update () {
