@@ -123,6 +123,7 @@ public class PlayerController : BaseCharacterController
     {
         if (isGroundTouch)
 		{			
+			// TODO アニメーターで指定のフレーム情報がうまく取れない
 			// falseであれば衝撃波を生成
 			Animator animator = GetComponent<Animator> ();
 			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo (0);
