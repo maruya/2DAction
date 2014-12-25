@@ -6,7 +6,7 @@ public class AntsNestMove : MonoBehaviour {
 	public GameObject origianlAnt ;					// 蟻のデータ
 	private Vector2 AntSize = new Vector2(1f,1.5f);	// 敵の体格を決める範囲
 	private const int MAX_ANTS = 2 ;				// 巣から生成される最大数(親の子ノードに座標Objが１つあるため,関数内部の処理でこの値に+1している)
-	private const float INTERVAL_TIME = 12f;		// 再出現までのインターバル
+	private const float INTERVAL_TIME = 5f;			// 再出現までのインターバル
 	private float prevTime ;						// 前回生成を行った時間
 	private bool isObjectNestEixt ;					// 出口にオブジェクトがあるか判定
 

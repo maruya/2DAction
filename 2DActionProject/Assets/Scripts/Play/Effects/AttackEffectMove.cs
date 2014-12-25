@@ -32,6 +32,6 @@ public class AttackEffectMove : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider2d)
 	{
 		if (collider2d.tag == "Enemy")
-		Destroy (gameObject);
+		Destroy (gameObject, 0.1f);
 	}
 }

@@ -3,8 +3,7 @@ using System.Collections;
 
 // シーン切り替え時に使用するクラス
 public class SceneChanger : MonoBehaviour {
-
-	// private GameObject changeImage ;		// イメージ画像
+	
 	private Vector3 startPoint ;			// 待機座標
 	private Vector3 endPoint ;				// 終了座標
 	private Vector3 targetPoint ;			// ターゲット座標
