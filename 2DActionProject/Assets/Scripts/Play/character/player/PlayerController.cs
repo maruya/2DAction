@@ -25,9 +25,8 @@ public class PlayerController : BaseCharacterController
         playerLeftLeg = GameObject.Find("playerLeftLeg").transform;
         playerRightLeg = GameObject.Find("playerRightLeg").transform;
 
-        // 座標の初期化
+        // 初期化
         prevPos = transform.position;
-
         jumpPower = JUMP_POWER;
     }
 
@@ -40,7 +39,7 @@ public class PlayerController : BaseCharacterController
     }
 
 
-    // PlayerMainで初めに行ってもらいたい、内部的処理をしている関数
+    // PlayerMainのUpdateで初めに呼んでもらう内部的処理をしている関数
     //======================================
     public void EarlyUpdate()
     {
@@ -59,7 +58,7 @@ public class PlayerController : BaseCharacterController
 
     private bool LegTouchToObject()
     {
-        // 両足で設置判定を見る
+        // 両足の設置判定を見る
         if (Physics2D.Linecast(transform.position, playerLeftLeg.position, OBJECT_LAYER) ||
             Physics2D.Linecast(transform.position, playerRightLeg.position, OBJECT_LAYER)) return true;
         else return false;
@@ -105,8 +104,8 @@ public class PlayerController : BaseCharacterController
     // 移動、ジャンプなど一般的なアニメーションを管理する
     public void AnimationCommon()
     {
-        AnimationWalk();    // 移動
-        AnimationJump();    // ジャンプ
+		AnimationWalk ();
+        AnimationJump();
     }
     // ダメージ
     //========================================
@@ -124,7 +123,7 @@ public class PlayerController : BaseCharacterController
     {
         if (isGroundTouch)
 		{			
-			// アニメーション名がNormalAttack1であればtrue
+			// falseであれば衝撃波を生成
 			Animator animator = GetComponent<Animator> ();
 			AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo (0);
 			if(! stateInfo.IsName("NormalAttack1"))
@@ -148,8 +147,8 @@ public class PlayerController : BaseCharacterController
 
     public void AnimationAttackManager()
     {
-        AnimationNormalAttack();    // 通常攻撃
-        AnimationAirAttack();       // 空中攻撃
+        AnimationNormalAttack();
+        AnimationAirAttack();
     }
 
 
@@ -164,8 +163,6 @@ public class PlayerController : BaseCharacterController
 
         // 速度を加算
         rigidbody2D.velocity = new Vector2(speed, this.rigidbody2D.velocity.y);
-
-
 
         // 向きを設定
         DirectionChange();

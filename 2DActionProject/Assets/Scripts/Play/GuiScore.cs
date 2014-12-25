@@ -15,8 +15,6 @@ public class GuiScore : MonoBehaviour {
 	void Update () {
 
         // スコアの更新
-        //PlayerMove player = GameObject.Find("player").GetComponent<PlayerMove>();
-        //score = player.GetStatus().Score;
         drawScore = GameObject.Find("player").GetComponent<BaseCharacterController>().score;
 
         // 描画する

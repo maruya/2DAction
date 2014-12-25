@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BardMain : MonoBehaviour {
 	
-	private BardController controller;	// コントローラー
+	private BardController controller;
 
 	void Start () {
 	
@@ -12,7 +12,7 @@ public class BardMain : MonoBehaviour {
 
 	void Update () {
 
-		controller.Work ();				// 一連の処理を内部でしてくれる
+		controller.Work ();		// 一連の処理を内部でしてくれる
 	
 	}
 }

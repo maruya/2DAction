@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AntMain : MonoBehaviour {
 
-	private AntController controller ;	// コントローラー
+	private AntController controller ;
 
 	void Start () {
 	

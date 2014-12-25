@@ -42,6 +42,7 @@ public class SceneChanger : MonoBehaviour {
 
 	private void SceneChange()
 	{
+		// 切り替えまでの一連の処理
 		switch (enumCase)
 		{
 		case ChangeCase.BEFORE :
@@ -84,11 +85,7 @@ public class SceneChanger : MonoBehaviour {
 
 		// シーン切り替えが必要か判定
 		bool isChange = CheckChangeScene ();
-
-		if (isChange) 
-		{
-			SceneChange();	// シーンの切り替え
-		}
+		if (isChange) SceneChange ();
 	
 	}
 }

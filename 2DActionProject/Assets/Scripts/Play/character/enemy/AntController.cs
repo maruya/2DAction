@@ -5,8 +5,8 @@ public class AntController : BaseCharacterController {
 
 	private const int POWER = 10 ;							// 攻撃力
 	private const float SPEED = 1.5f ;						// 速度
-	private Vector2 MOVEMENT_TIME = new Vector2( 1f,3f ) ;	// 移動時間
-	private float nextMovementTime ;						// 次の移動時間
+	private Vector2 MOVEMENT_TIME = new Vector2( 1f,3f ) ;	// 移動時間,Random.Rangeで決める
+	private float movementTime ;							// 移動時間
 	private float intervalTime ;							// インターバル
 	private bool isWalkAnimation ;							// 歩いてるか判断 
 
@@ -16,13 +16,11 @@ public class AntController : BaseCharacterController {
 		// 初期化
 		power = POWER;
 		speed = SPEED;
-
-		// 移動する時間を決定
-		nextMovementTime = Random.Range (MOVEMENT_TIME.x, MOVEMENT_TIME.y);
-
-		// 初期化
 		intervalTime = Time.time;
 		isWalkAnimation = false;
+
+		// 移動する時間を決定
+		movementTime = Random.Range (MOVEMENT_TIME.x, MOVEMENT_TIME.y);
 	}
 
 
@@ -39,13 +37,13 @@ public class AntController : BaseCharacterController {
 
 	private void UpdateDirection()
 	{
-		// 時間差
+		// 経過時間
 		float gap = Mathf.Abs (intervalTime - Time.time);
 
-		if (gap >= nextMovementTime) 
+		if (gap >= movementTime) 
 		{
-			// 次回のインターバルと移動方向の更新
-			nextMovementTime = Random.Range(MOVEMENT_TIME.x, MOVEMENT_TIME.y);
+			// インターバルと移動方向の更新
+			movementTime = Random.Range(MOVEMENT_TIME.x, MOVEMENT_TIME.y);
 			intervalTime = Time.time;
 			speed = (speed > 0 ? -SPEED : SPEED) ;
 
@@ -79,8 +77,6 @@ public class AntController : BaseCharacterController {
 		{
 			// 死亡エフェクトをプレハブから生成
 			Instantiate(Resources.Load("Prefabs/Smoke"), transform.position, transform.rotation);
-			
-			// 自身の持つスコアを生成
 			CreateDrawScore();
 			
 			// プレイヤーにスコアを渡して消滅
@@ -107,7 +103,6 @@ public class AntController : BaseCharacterController {
 
 		// 現在のアニメーションをチェック
 		isWalkAnimation = CheckAnimation ();
-
 		if (isWalkAnimation) Movement ();
 	}
 
@@ -117,9 +112,3 @@ public class AntController : BaseCharacterController {
 		if (collider2d.tag == "PlayerAttack")  hp -= 1;
 	}
 }
-
-
-
-
-
-

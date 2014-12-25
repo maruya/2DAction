@@ -71,8 +71,6 @@ public class BardController : BaseCharacterController {
 		{
 			// 死亡エフェクトをプレハブから生成
 			Instantiate(Resources.Load("Prefabs/Smoke"), transform.position, transform.rotation);
-			
-			// 自身の持つスコアを生成
 			CreateDrawScore();
 			
 			// プレイヤーにスコアを渡して消滅

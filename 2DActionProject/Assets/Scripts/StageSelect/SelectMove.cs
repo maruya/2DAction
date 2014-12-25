@@ -31,9 +31,6 @@ public class SelectMove : MonoBehaviour {
 	
 		CreateStageInfoList ();
 
-		//ToDO
-		// Icon
-		//Icon = GameObject.Find ("")
 	}
 
 	void Update () {
