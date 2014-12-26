@@ -8,6 +8,7 @@ public class PlayerController : BaseCharacterController
     private int OBJECT_LAYER;				// 接地判定に使用する専用レイヤー
     private Transform playerLeftLeg;		// キャラクターの左足(接地判定に(使用)
     private Transform playerRightLeg;		// キャラクターの右足(接地判定に(使用)
+	private Transform playerCenterLeg;		// キャラクターの両足の中間
     private Vector3 prevPos;				// 前回の座標
     private const float KNOCK_BACK = 2000f;	// ノックバック定数
     private const float SPEED = 2.0f;       // プレイヤーの速度
@@ -24,6 +25,7 @@ public class PlayerController : BaseCharacterController
         // 両足の情報を取得
         playerLeftLeg = GameObject.Find("playerLeftLeg").transform;
         playerRightLeg = GameObject.Find("playerRightLeg").transform;
+		playerCenterLeg = GameObject.Find ("playerCenterLeg").transform;
 
         // 初期化
         prevPos = transform.position;
@@ -52,7 +54,9 @@ public class PlayerController : BaseCharacterController
     {
         // 両足の設置判定を見る
         if (Physics2D.Linecast(transform.position, playerLeftLeg.position, OBJECT_LAYER) ||
-            Physics2D.Linecast(transform.position, playerRightLeg.position, OBJECT_LAYER)) return true;
+            Physics2D.Linecast(transform.position, playerRightLeg.position, OBJECT_LAYER)||
+		    Physics2D.Linecast(transform.position, playerCenterLeg.position, OBJECT_LAYER)) 
+			return true;
         else return false;
     }
 
