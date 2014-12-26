@@ -32,6 +32,7 @@ public class AntsNestMove : MonoBehaviour {
 
 	}
 
+
 	void UpdatePrevTime(){prevTime = Time.time;}
 
 

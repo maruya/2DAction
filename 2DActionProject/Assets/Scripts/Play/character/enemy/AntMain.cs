@@ -12,6 +12,6 @@ public class AntMain : MonoBehaviour {
 
 	void Update () {
 	
-		controller.Work ();		// 一連の処理をしてくれる
+		controller.Work ();		// 敵の挙動から処理までを操作
 	}
 }

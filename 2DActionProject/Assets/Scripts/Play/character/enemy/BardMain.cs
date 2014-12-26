@@ -12,7 +12,7 @@ public class BardMain : MonoBehaviour {
 
 	void Update () {
 
-		controller.Work ();		// 一連の処理を内部でしてくれる
+		controller.Work ();		// 敵の挙動から処理までを操作
 	
 	}
 }

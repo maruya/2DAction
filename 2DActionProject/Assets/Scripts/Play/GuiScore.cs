@@ -6,10 +6,11 @@ public class GuiScore : MonoBehaviour {
     // GUIの表示
     [ExecuteInEditMode()]
 
-    private int drawScore = 0;
+	private int drawScore ;
 
 	void Start () {
 	
+		drawScore = 0;
 	}
 	
 	void Update () {

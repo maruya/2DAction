@@ -30,14 +30,6 @@ public class PlayerController : BaseCharacterController
         jumpPower = JUMP_POWER;
     }
 
-    protected override void Start()
-    {
-    }
-
-    protected override void Update()
-    {
-    }
-
 
     // PlayerMainのUpdateで初めに呼んでもらう内部的処理をしている関数
     //======================================

@@ -6,7 +6,7 @@ public class Stage1Clear : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D collider2d)
 	{
-		if (collider2d.name == "player") 
+		if (collider2d.tag == "Player") 
 		{
 			// スコアを記録
 			int Stage1Point = GameObject.Find("player").GetComponent<BaseCharacterController>().score;

@@ -5,13 +5,6 @@ public class ItemMain : MonoBehaviour {
 
     public int point = 0;   // アイテムの持つポイント
 
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
 
     void CreateDrawScore()
     {

@@ -2,14 +2,7 @@
 using System.Collections;
 
 public class SelectMenu : MonoBehaviour {
-	
-	void Start () {
 
-	}
-
-	void Update () {
-
-	}
 
 	void OnGUI()
 	{

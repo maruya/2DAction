@@ -5,10 +5,6 @@ public class PlayerCamera : MonoBehaviour {
 
 	private const float CameraPosZ = -10f;		// カメラのZ座標の固定値
 
-	void Start () {
-	
-	}
-
 	void Update () {
 
 		// カメラをキャプチャ

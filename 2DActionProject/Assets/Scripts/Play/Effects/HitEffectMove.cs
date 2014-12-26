@@ -2,10 +2,6 @@
 using System.Collections;
 
 public class HitEffectMove : MonoBehaviour {
-	
-	void Start () {
-	
-	}
 
 	void Update () {
 	
