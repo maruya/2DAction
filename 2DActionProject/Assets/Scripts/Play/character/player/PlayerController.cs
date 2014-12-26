@@ -110,7 +110,7 @@ public class PlayerController : BaseCharacterController
     // ダメージ
     //========================================
 
-    public void AnimationDamage()
+    private void AnimationDamage()
     {
         Vector2 vec2 = new Vector2((transform.localScale.x > 0 ? KNOCK_BACK : -KNOCK_BACK), 0f);
         rigidbody2D.AddForce(vec2);
@@ -171,9 +171,10 @@ public class PlayerController : BaseCharacterController
         // 向きを設定
         DirectionChange();
     }
+	
 
 
-    void OnCollisionEnter2D(Collision2D collision2d)
+	void OnCollisionEnter2D(Collision2D collision2d)
     {
         if (collision2d.transform.tag == "Enemy")
         {

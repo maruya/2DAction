@@ -11,9 +11,8 @@ public class PlayerMain : MonoBehaviour {
 	}
 
 	void Update () {
-
-        controller.EarlyUpdate();       										// コントローラー内で行う内部的な処理,Updateの初めに呼ぶ
-        controller.AnimationCommon();   										// ジャンプ、移動の基本的な操作ができるようになる関数
+		controller.EarlyUpdate();       										// コントローラー内で行う内部的な処理,Updateの初めに呼ぶ
+		controller.AnimationCommon();   										// ジャンプ、移動の基本的な操作ができるようになる関数
         if (Input.GetKeyDown(KeyCode.Z)) controller.AnimationAttackManager();  // プレイヤーの状態に合わせた攻撃
 
 	}
