@@ -10,5 +10,6 @@ public class GuiTime : MonoBehaviour {
 	
 		timer = Time.time;
 		guiText.text = "TIME " + (int)timer;
+
 	}
 }

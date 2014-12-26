@@ -71,7 +71,6 @@ public class AntController : BaseCharacterController {
 			Instantiate(Resources.Load(serif), pos, this.transform.rotation);
 			addX += 0.5f ;
 		}
-		
 	}
 
 

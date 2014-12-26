@@ -64,13 +64,13 @@ public class AntsNestMove : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider2d)
 	{
 		// 出口にオブジェクトがあるか判定
-		if (collider2d.transform.tag == "Object") isObjectNestEixt = true;
+		if (collider2d.tag == "Object") isObjectNestEixt = true;
 	}
 
 	void OnTriggerExit2D(Collider2D collider2d)
 	{
 		// 出口にオブジェクトがあるか判定
-		if (collider2d.transform.tag == "Object") isObjectNestEixt = false;
+		if (collider2d.tag == "Object") isObjectNestEixt = false;
 	}
 }
 

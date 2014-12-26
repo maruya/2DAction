@@ -35,7 +35,7 @@ public class AntBullet : MonoBehaviour {
 
 	void Update () {
 
-		StartCoroutine (Die ());	// 指定時間で消滅
+		StartCoroutine (Die());		// 指定時間で消滅
 		BulletMovement ();			// 移動
 	}
 
