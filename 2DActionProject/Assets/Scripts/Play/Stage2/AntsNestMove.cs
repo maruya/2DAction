@@ -16,9 +16,6 @@ public class AntsNestMove : MonoBehaviour {
 		// 初期化
 		prevTime = Time.time;
 		isObjectNestEixt = false;
-
-		// 初回に１匹生成する
-		CreateAnt ();
 	}
 
 
