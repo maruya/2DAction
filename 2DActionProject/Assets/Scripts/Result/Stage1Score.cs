@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Stage1Score : MonoBehaviour {
 
-	private const int TimeDrop = 5 ;			// 減少値
-	private const int TimeBonus = 10 ;			// ボーナス
+	private const int TimeDrop = 2 ;			// 減少値
+	private const int Bonus = 5 ;				// ボーナス
 
 	private int getPoint ;						// 獲得したポイント
 	private int clearTime ;						// クリア時間
-	public int totalScore { get; private set; }	// スコア
+	public  int totalScore { get; private set; }// スコア
 
 	void Awake()
 	{
@@ -17,7 +17,7 @@ public class Stage1Score : MonoBehaviour {
 		clearTime = (int)PlayerPrefs.GetFloat ("Stage1Time");
 
 		// スコアの計算
-		totalScore = getPoint + (clearTime / TimeDrop) * TimeBonus;
+		totalScore = (getPoint - (clearTime * TimeDrop)) * Bonus;
 	}
 
 	void Update () {

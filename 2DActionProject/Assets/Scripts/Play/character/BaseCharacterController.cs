@@ -4,12 +4,12 @@ using System.Collections;
 public class BaseCharacterController : MonoBehaviour {
 
 	// ベースとなるキャラクタークラス
-	public int hp ;				// 敵が持つヒットポイント
-	public int power ;
-	public float speed ;		// 速度
-	public float jumpPower;		// ジャンプ力
-	public int score ;			// スコア
-	public bool isGroundTouch;	// 接地判定
+	public int hp 				{ get ;set; }// 敵が持つヒットポイント
+	public int power			{ get ;set; }// 攻撃力
+	public float speed			{ get ;set; }// 速度
+	public float jumpPower		{ get ;set; }// ジャンプ力
+	public int score			{ get ;set; }// スコア
+	public bool isGroundTouch	{ get ;set; }// 接地判定
 	
 	
 	protected virtual void Awake()

@@ -3,8 +3,10 @@ using System.Collections;
 
 public class BardController : BaseCharacterController {
 
-	private const int POWER = 20 ;									// 攻撃力
-	private  const float SPEED = 1.0f;								// 移動力
+	private const int HP = 1 ;										// HP
+	private const int POWER = 40 ;									// 攻撃力
+	private const float SPEED = 1.0f;								// 移動力
+	private const int POINT = 50 ;									// ポイント
 	private const float WAVE_SIZE = 2.0f;							// 揺れる幅
 	private int directionCounter ;									// 方向変換までのカウンター
 	private  int directionintetval ;								// 変更までの数値,乱数で決める
@@ -15,8 +17,10 @@ public class BardController : BaseCharacterController {
 	protected override void Awake ()
 	{
 		// 初期化
+		hp = HP;
 		power = POWER;
 		speed = SPEED;
+		score = POINT;
 		directionCounter = 0;
 		directionintetval = 0;
 

@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class AntController : BaseCharacterController {
-
+	
+	private const int HP = 1 ;								// HP
 	private const int POWER = 10 ;							// 攻撃力
-	private const float SPEED = 1.5f ;						// 速度
+	private const float SPEED = 1.5f ;						// 速度力
+	private const int POINT = 40 ;							// ポイント
 	private Vector2 MOVEMENT_TIME = new Vector2( 1f,3f ) ;	// 移動時間,Random.Rangeで決める
 	private float movementTime ;							// 移動時間
 	private float intervalTime ;							// インターバル
@@ -14,8 +16,10 @@ public class AntController : BaseCharacterController {
 	protected override void Awake()
 	{
 		// 初期化
+		hp = HP;
 		power = POWER;
 		speed = SPEED;
+		score = POINT;
 		intervalTime = Time.time;
 		isWalkAnimation = false;
 
